@@ -3,8 +3,8 @@ resource "aws_key_pair" "web_admin" {
   public_key = file("~/.ssh/web_admin.pub")
 }
 
-resource "aws_instance" "webserver" {
- ami = "ami-0bba69335379e17f8"
+resource "aws_instance" "web" {
+ ami = "ami-035233c9da2fabf52"
  instance_type = "t2.micro"
  key_name = aws_key_pair.web_admin.key_name
  subnet_id = aws_subnet.Public-Subnet-A.id
