@@ -3,8 +3,8 @@ resource "aws_db_instance" "my_db" {
   engine = "mysql"
   engine_version = "8.0.28"
   instance_class = "db.t2.micro"
-  username = "admin"
-  password = "admin12345"
+  username = "username"
+  password = "password"
   skip_final_snapshot = true
   db_subnet_group_name = aws_db_subnet_group.my_db_subnet.name	
 }
